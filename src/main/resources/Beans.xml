@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
        <bean id="diesel" class="beans.DieselEngine"/>
        <bean id="petrol" class="beans.PetrolEngine"/>
-       <bean id="car" class="service.CarService">
+       <bean id="car" class="service.CarService" scope="prototype">
            <property name="engine" ref="petrol"></property>
        </bean>
 </beans>
